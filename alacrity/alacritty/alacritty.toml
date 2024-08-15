@@ -1,0 +1,19 @@
+import = [
+    "~/.config/alacritty/themes/themes/tokyo-night-storm.toml"
+]
+
+[window]
+padding.x = 10
+padding.y = 10
+decorations = "Full"
+startup_mode = "Windowed"
+title = " "
+dynamic_title = false
+
+[font]
+normal.family = "Hack Nerd Font"
+size = 14
+
+[terminal]
+osc52 = "CopyPaste"
+
