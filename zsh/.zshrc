@@ -22,34 +22,21 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab # Replace zsh's default completion selection menu with fzf!
+zinit ice lucid as"program" pick"bin/git-dsf"
+zinit load so-fancy/diff-so-fancy
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Get rid of ZInit alias so that Zoxide can init properly
-unalias zi
+# unalias zi
 
 # Shell integrations
 eval "$(starship init zsh)"
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
+# eval "$(fzf --zsh)"
+# eval "$(zoxide init zsh)"
+# eval $(thefuck --alias)
 
-
-source "/etc/profile.d/rvm.sh"
-
-
-# Global Configs
-export EDITOR="nvim"
-export AWS_PROFILE=Drop_Artifacts
-export REGION=eu-west-1
-export ECR_REPO_URL=679543960196.dkr.ecr.eu-west-1.amazonaws.com
-export REGISTRY_ID=679543960196
-export ADVERTISING_NAME="Fresco"
-export NATIVE_APPLIANCE_ID="appliance-id"
-export NATIVE_DEVICE_ID=device-id
-export PATH=/home/johnsteps/.local/bin:$PATH
-export PATH=/home/johnsteps/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/johnsteps/.config/
+# source "/etc/profile.d/rvm.sh"
 
 # fzf configuration
 # Need to set it like this otherwise the FZF_DEFAULT_OPTS interferes with the fzf-tab plugin
@@ -87,7 +74,7 @@ zstyle ":fzf-tab:*" fzf-bindings "enter:accept"
 zstyle ":fzf-tab:complete:*" fzf-preview 'eza --icons --color $realpath' # Preview directories when doing cd
 
 # ----- Bat (better cat) -----
-export BAT_THEME=tokyonight_night
+export BAT_THEME="Catppuccin Mocha"
 
 # Keybindings
 bindkey -e
@@ -109,28 +96,34 @@ setopt hist_find_no_dups
 
 
 # Aliases
-alias cd='z'
+# alias cd='z'
 alias vim='nvim'
 alias c='clear'
 alias loadesp=". $HOME/esp/esp-idf/export.sh"
 alias micro="cd /home/johnsteps/Git/iot-micro-firmware;loadesp"
 alias linux="cd /home/johnsteps/Git/iot-linux-firmware"
 alias ufp="cd /home/johnsteps/Git/universal-fresco-protocol"
+alias yocto="cd /home/johnsteps/Git/iot-linux-build/"
 alias cat="batcat"
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias ll="eza --color=always --long --git --icons=always"
+alias zshrc="nvim ~/.zshrc"
 
-# Micro Firmware Env Variables
-export ADVERTISING_NAME=Fresco
-export NATIVE_APPLIANCE_ID=appliance-id
+# Global Configs
+export EDITOR="nvim"
+export AWS_PROFILE=Drop_Artifacts
+export REGION=eu-west-1
+export ECR_REPO_URL=679543960196.dkr.ecr.eu-west-1.amazonaws.com
+export REGISTRY_ID=679543960196
+export ADVERTISING_NAME="Fresco"
+export NATIVE_APPLIANCE_ID="appliance-id"
 export NATIVE_DEVICE_ID=device-id
+export PATH=~/bin:$PATH
 
 # User configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-eval $(thefuck --alias)
 
 function untilSucceeds() {
     while true; do $@ && break; sleep 0.5; done
@@ -139,3 +132,11 @@ function untilSucceeds() {
 function untilFails() {
     while true; do $@ || break; sleep 0.5; done
 }
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOROOT:$GOPATH:$GOBIN
