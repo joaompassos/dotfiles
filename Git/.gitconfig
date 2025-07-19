@@ -1,0 +1,29 @@
+[user]
+	name = Joao Passos
+	email = joao.passos@frescocooks.com
+[alias]
+        s = status
+        co = checkout
+        cob = checkout -b
+        br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+        l = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -100
+        cm = commit
+        sh = show
+        sh2 = show HEAD~1
+        undo = reset HEAD~1 --mixed
+        amend = commit --amend
+        adp = add -p
+		ds = diff --staged
+[core]
+        editor = nvim
+        pager = diff-so-fancy | less --tabs=4 -RFX
+[credential "https://github.com"]
+        helper =
+        helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+        helper =
+        helper = !/usr/bin/gh auth git-credential
+[commit]
+	template = /home/johnsteps/.gitmessage
+[color]
+	ui = auto
