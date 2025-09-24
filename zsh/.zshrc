@@ -27,14 +27,13 @@ zinit load so-fancy/diff-so-fancy
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Get rid of ZInit alias so that Zoxide can init properly
-# unalias zi
-
 # Shell integrations
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
 # eval "$(fzf --zsh)"
 # eval "$(zoxide init zsh)"
-# eval $(thefuck --alias)
+eval $(thefuck --alias)
+eval $(thefuck --alias fds)
 
 # source "/etc/profile.d/rvm.sh"
 
@@ -97,13 +96,14 @@ setopt hist_find_no_dups
 
 # Aliases
 # alias cd='z'
-alias vim='nvim'
+alias vim='nvim .'
 alias c='clear'
 alias loadesp=". $HOME/esp/esp-idf/export.sh"
 alias micro="cd /home/johnsteps/Git/iot-micro-firmware;loadesp"
 alias linux="cd /home/johnsteps/Git/iot-linux-firmware"
 alias ufp="cd /home/johnsteps/Git/universal-fresco-protocol"
 alias yocto="cd /home/johnsteps/Git/iot-linux-build/"
+alias platform="cd /home/johnsteps/Git/platform-kitchenos"
 alias cat="batcat"
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias ll="eza --color=always --long --git --icons=always"
@@ -111,13 +111,13 @@ alias zshrc="nvim ~/.zshrc"
 
 # Global Configs
 export EDITOR="nvim"
-export AWS_PROFILE=Drop_Artifacts
-export REGION=eu-west-1
-export ECR_REPO_URL=679543960196.dkr.ecr.eu-west-1.amazonaws.com
-export REGISTRY_ID=679543960196
-export ADVERTISING_NAME="Fresco"
-export NATIVE_APPLIANCE_ID="appliance-id"
-export NATIVE_DEVICE_ID=device-id
+# export AWS_PROFILE=Drop_Artifacts
+# export REGION=eu-west-1
+# export ECR_REPO_URL=679543960196.dkr.ecr.eu-west-1.amazonaws.com
+# export REGISTRY_ID=679543960196
+# export ADVERTISING_NAME="Fresco"
+# export NATIVE_APPLIANCE_ID="appliance-id"
+# export NATIVE_DEVICE_ID=device-id
 export PATH=~/bin:$PATH
 
 # User configuration
@@ -140,3 +140,13 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOROOT:$GOPATH:$GOBIN
+
+# AsyncAPI CLI Autocomplete
+
+ASYNCAPI_AC_ZSH_SETUP_PATH=/home/johnsteps/.cache/@asyncapi/cli/autocomplete/zsh_setup && test -f $ASYNCAPI_AC_ZSH_SETUP_PATH && source $ASYNCAPI_AC_ZSH_SETUP_PATH; # asyncapi autocomplete setup
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
