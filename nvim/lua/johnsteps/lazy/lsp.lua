@@ -69,10 +69,10 @@ return { -- LSP Configuration & Plugins
 				--  Similar to document symbols, except searches over your whole project.
 				map("<leader>sw", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Open Workspace Symbols")
 
-				-- Jump to the type of the word under your cursor.
-				--  Useful when you're not sure what type a variable is and you want to see
-				--  the definition of its *type*, not where it was *defined*.
-				map("gD", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
+			-- Jump to the type of the word under your cursor.
+			--  Useful when you're not sure what type a variable is and you want to see
+			--  the definition of its *type*, not where it was *defined*.
+			map("gt", require("telescope.builtin").lsp_type_definitions, "[G]oto [T]ype definition")
 
 				-- Opens a popup that displays documentation about the word under your cursor
 				--  See `:help K` for why this keymap

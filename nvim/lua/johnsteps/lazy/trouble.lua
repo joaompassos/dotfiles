@@ -24,8 +24,7 @@ return {
 		vim.keymap.set("n", "<leader>tn", function() trouble.next({skip_groups = true, jump = true}) end, { desc = "[T]rouble [N]ext item" })
 		vim.keymap.set("n", "<leader>tp", function() trouble.prev({skip_groups = true, jump = true}) end, { desc = "[T]rouble [P]revious item" })
 		vim.keymap.set("n", "<leader>tq", function() trouble.close() end, { desc = "[T]rouble [Q]uit" })
-        vim.keymap.set("n", "<leader>tt", function() trouble.toggle()
-            end)
+		vim.keymap.set("n", "<leader>tt", function() trouble.toggle() end, { desc = "[T]rouble [T]oggle" })
 
 		-- stylua: ignore end
 	end,
