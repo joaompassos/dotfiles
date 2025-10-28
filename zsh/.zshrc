@@ -104,6 +104,7 @@ alias linux="cd /home/johnsteps/Git/iot-linux-firmware"
 alias ufp="cd /home/johnsteps/Git/universal-fresco-protocol"
 alias yocto="cd /home/johnsteps/Git/iot-linux-build/"
 alias platform="cd /home/johnsteps/Git/platform-kitchenos"
+alias microcli="cd /home/johnsteps/Git/iot-micro-cli"
 alias cat="batcat"
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias ll="eza --color=always --long --git --icons=always"
@@ -111,10 +112,10 @@ alias zshrc="nvim ~/.zshrc"
 
 # Global Configs
 export EDITOR="nvim"
-# export AWS_PROFILE=Drop_Artifacts
-# export REGION=eu-west-1
-# export ECR_REPO_URL=679543960196.dkr.ecr.eu-west-1.amazonaws.com
-# export REGISTRY_ID=679543960196
+export AWS_PROFILE=Drop_Artifacts
+export REGION=eu-west-1
+export ECR_REPO_URL=679543960196.dkr.ecr.eu-west-1.amazonaws.com
+export REGISTRY_ID=679543960196
 # export ADVERTISING_NAME="Fresco"
 # export NATIVE_APPLIANCE_ID="appliance-id"
 # export NATIVE_DEVICE_ID=device-id
@@ -149,4 +150,29 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+
+
+# --- Kitty duplicate-session integration (safe version) ---
+precmd() {
+  # Save last command without printing anything
+  local last
+  last="$(fc -ln -1 2>/dev/null | tail -n1)"
+  if [[ -n "$last" ]]; then
+    export LAST_CMD="$last"
+  fi
+}
+
+# Only repeat last command if REPEAT_LAST_CMD=1
+# and it is not trivial
+if [[ "$REPEAT_LAST_CMD" == "1" && -n "$LAST_CMD" ]]; then
+  # Skip trivial commands
+  case "$LAST_CMD" in
+    "" | cd* | ls* | clear | history* ) ;;
+    *) 
+      echo "Repeating last command: $LAST_CMD"
+      eval "$LAST_CMD"
+      ;;
+  esac
+fi
+# ------------------------------------------------------------
 
