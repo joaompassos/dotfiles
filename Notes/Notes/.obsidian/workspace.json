@@ -1,0 +1,231 @@
+{
+  "main": {
+    "id": "c0b7597b8ed8b57e",
+    "type": "split",
+    "children": [
+      {
+        "id": "6593b0af2cc2ddd1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8cddefdff8056932",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Partners/Kenwood.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kenwood"
+            }
+          },
+          {
+            "id": "0c53b0709cf4fe62",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Micro Agent/GE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GE"
+            }
+          },
+          {
+            "id": "3624292043ce8415",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Micro Agent/GE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GE"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "41e7cd6907b0e80f",
+    "type": "split",
+    "children": [
+      {
+        "id": "f0c58a2052a167e8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7b0bf1d21206b232",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b5581fb9d45977e5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "31414b48f6b86b2c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "8113dd60b16a2a5a",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4e1e2b31a604b00",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d3aaf92e4c014aa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Micro Agent/MicroAgent.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for MicroAgent"
+            }
+          },
+          {
+            "id": "a5b49228a1a0142b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Update EC2.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Update EC2"
+            }
+          },
+          {
+            "id": "96d1913d9886432e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b566026f5e7f1794",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Micro Agent/MicroAgent.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of MicroAgent"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "3624292043ce8415",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "Micro Agent/GE.md",
+    "Fresco AI Initiative.md",
+    "Micro Agent/MicroAgent.md",
+    "Untitled 1.base",
+    "Untitled 2.base",
+    "Untitled.base",
+    "Infrastructure/Update EC2.md",
+    "Partners/Viking.md",
+    "Partners/Kenwood.md",
+    "Management/H2 Planning.md",
+    "Infrastructure/Update Sonar Cloud on Docker.md",
+    "TODO.md",
+    "Linux/Linux Agent How-to.md",
+    "Linux/D-Bus.md",
+    "Partners/Vorwerk.md",
+    "Infrastructure/Platform specs.md",
+    "Micro Agent/EGO OTA.md",
+    "Management/Ricardo Meeting.md",
+    "Micro Agent",
+    "Infrastructure",
+    "Partner Emulator.md",
+    "Partners",
+    "Linux",
+    "Management",
+    "Welcome.md"
+  ]
+}
